@@ -72,7 +72,7 @@ header{
 .main-container .row{
     background-color: #0a141d;
     margin: auto;
-    height: 500px;
+    height: 80vh;
     width: 90%;
     max-width: 1080px;
 }
@@ -139,7 +139,7 @@ header{
     animation: animate 4s ease-in-out infinite;
 }
 
-section .row .boton{
+/*section .row .boton{
     width: 100%;
     height: 100%;
     display: flex;
@@ -159,7 +159,7 @@ section .row .boton button
 section .row .boton button:hover
 {
     transform: scale(1.2);
-} 
+} */
 
 .main-container .antho{
     width: 100%;
@@ -248,6 +248,8 @@ border-radius: 30%;
 
 .pie-pagina .grupo-1 .red-social a{
     margin: auto;
+    text-decoration: none;
+    color: #fff;
 }
 
 .pie-pagina .grupo-1 .red-social a:hover{
@@ -285,6 +287,117 @@ color: aqua;
     max-height: 400px;
     border-radius: 30%;
 }
+
+
+.card-section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a1a2a;
+    background-image: linear-gradient(225deg, #570506 0%, #cc2426 33%, #4d5967 66%, #342f2f 100%);
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 40px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: min(100%, 350px);
+    height: 500px;
+    padding: 30px 25px;
+    background: #fff;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0,5);
+    transition: all 0.5 ease;
+    border-radius: 45px;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card:hover{
+    transform: translateY(20px);
+}
+.card:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(208, 195, 195, 0.5), rgb(10,10,29));
+    transition: all 0.5;
+    opacity: 0;
+    border-radius: 40px;
+}
+
+.card:hover::after{
+    opacity: 1;
+}
+
+.card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+}
+
+
+.card .info {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5;
+}
+
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info h3{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.card .info p{
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin: 10px 0 25px;
+    line-height: 130%;
+}
+
+.card .info .btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #4d5967;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.card .info btn:hover{
+    box-shadow: 0px 7px 10px rgb(0, 0, 0, 0.5);
+    background-color: #4d5967;
+    color: #fff;
+}
+
 
 @keyframes banner{
 	0%, 20%{
