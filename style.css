@@ -74,9 +74,11 @@ header {
 .main-container section:nth-child(1) {
     margin-top: 100px;
 }
-.main-container section:nth-child(2) {
+
+.main-container #section-index{
     margin-top: 29px;
 }
+
 .main-container .row {
     background-color: var(--color-primario-2);
     margin: auto;
@@ -408,9 +410,86 @@ header {
 }
 
 .habilidades-container {
-    display: flex;
+    align-items:center;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 40px 40px;
 }
+
+.habilidades-container .habilidad {
+    position: relative;
+    width: min(100%, 350px);
+}
+
+.habilidades-container .img-habilidad {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+}
+.habilidades-container .img-habilidad img {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    
+}
+
+#row-habilidades {
+display: block;
+text-align: center;
+}
+
+.habilidades-container .titulo-habilidad{
+    font-size: 40px;
+    color: #fff;
+}
+
+#row-aptitudes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.info-aptitudes {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+}
+
+.lista-aptitudes {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5vh;
+}
+
+.lista-aptitudes li p {
+    color: #FFF; 
+    font-size: 20px; 
+    margin: 0; 
+    flex: 1; 
+    text-align: left; 
+}
+
+.lista-aptitudes li img {
+    width: 50px; 
+    height: 50px; 
+    border: 2px solid var(--color-primario-1); 
+    border-radius: 10px; 
+    margin-left: 10px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.lista-aptitudes li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 10px;
+    height: 60px; 
+}
+
+
 
 @keyframes banner {
     0%, 20% {
