@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mi - AnthoFu</title>
+    <link rel="icon" href="/imagenes/AnthoFu Logo - Negro .png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/ff177c9b30.js" crossorigin="anonymous"></script>
 </head>
@@ -32,19 +33,27 @@
 
     <div class="main-container">
         <section class="about">
-            <div class="row">
+            <div class="row" id="row-proyectos">
                 <div class="about-info">
-                    <h2>AnthoFu</h2>
+                    <h2>Proyectos</h2>
                     <br>
-                    <p>Mi nombre es Anthony Fuentes, nací el 19 de febrero de 2005 en Venezuela y estoy actualmente en el tercer semestre de Ingenieria en Informática en la UNEXCA. Me considero una persona con varias habilidades importantes para la lógica y la planificación, así como debilidades por igual.</p>
-                </div>
-                <div class="about-img">
-                    <img src="imagenes/Antho-pro.jpeg" alt="">
+                    <p>Seccion en la que se mostraran los proyectos más destacables que haya realizado, ya sea de forma autodidacta o por proyectos realizados en empresas.</p>
+                    
                 </div>
             </div>
         </section>
     </div>
 
+<section id="section-proyectos">
+    <button class="nav-button left" onclick="previousProject()">&#10094;</button>
+            <div class="project-display">
+                <h2 id="project-title">Título del Proyecto</h2>
+                <img id="project-image" src="" alt="Imagen del Proyecto">
+                <p id="project-description">Descripción breve del proyecto.</p>
+                <button id="github-button"><a href="" target="_blank">Ver Código en GitHub</a></button>
+            </div>
+            <button class="nav-button right" onclick="nextProject()">&#10095;</button>
+</section>
 
 
 
@@ -89,6 +98,6 @@
 
 
 
-
+    <script src="main.js"></script>
 </body>
 </html>
