@@ -67,7 +67,7 @@ header {
     width: 100%;
     background: var(--color-primario-3);
     /* background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(17, 27, 39) 100%); */
-    height: calc(100vh - 54px);
+    height: 100%;
     border: 2px solid black;
 }
 
@@ -76,9 +76,6 @@ header {
     margin-top: 100px;
 }
 
-.main-container #section-index{
-    margin-top: 29px;
-}
 
 #section-banner{
     margin-top:0px;
@@ -165,13 +162,6 @@ header {
 .main-container .antho p {
     font-size: 30px;
     color: #fff;
-}
-
-.contenedor-contacto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
 }
 
 .introduce-datos {
@@ -275,7 +265,6 @@ header {
 }
 
 .card-section {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,9 +559,7 @@ height: 160vh;
 
 /*Empleos, experiencia laboral*/
 
-#section-experiencia{
-    height: 100vh;
-}
+
 
 #row-experiencia {
     display: block;
@@ -645,7 +632,7 @@ height: 160vh;
     color: white;
     width: 100%;
     background: var(--color-primario-3);
-    height: calc(100vh - 54px);
+    height: 100%;
     border: 2px solid black;
     display: flex;
     align-items: center;
@@ -711,6 +698,86 @@ height: 160vh;
 }
 
 
+
+
+/* Sección de contacto */
+.contact {
+    background: var(--color-primario-3);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.email-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.email-section p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.email-section button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.email-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Botones de contacto */
+.contact-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+}
+
+.whatsapp-button:hover {
+    background-color: #1b9f4d;
+}
+
+.linkedin-button {
+    background-color: #0077B5;
+}
+
+.linkedin-button:hover {
+    background-color: #005582;
+}
+
+.contact-button a {
+    color: white;
+    text-decoration: none;
+}
 
 
 @keyframes banner {

@@ -41,5 +41,19 @@ function previousProject() {
     displayProject(currentProject);
 }
 
+
+
+
+function copyEmail() {
+    var emailText = document.getElementById("email-text").innerText;
+    navigator.clipboard.writeText(emailText).then(function() {
+        alert("Correo electrónico copiado: " + emailText);
+    }, function(err) {
+        alert("Error al copiar el correo electrónico: ", err);
+    });
+}
+
+
+
 // Inicializa el primer proyecto
 displayProject(currentProject);
