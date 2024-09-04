@@ -741,6 +741,10 @@ height: 160vh;
     background-color: #0056b3;
 }
 
+
+
+
+
 /* Botones de contacto */
 .contact-button {
     display: block;
@@ -804,13 +808,157 @@ height: 160vh;
     }
 }
 
-@media screen and (max-width:800px) {
-    .pie-pagina .grupo-1 {
-        width: 100%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
-        padding: 45px 0px;
-    }
+
+
+
+
+
+
+#menu-toggle {
+    display: none;
+}
+
+/* Estilos para el icono de hamburguesa */
+.menu-icon {
+    display: none; /* Solo se mostrará en pantallas pequeñas */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+/* Estilos base para el menú */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
+
+
+/*Adaptabilidad a dispositivos moviles*/
+
+@media screen and (max-width:800px) {
+
+    .banner .content h1 {
+        font-size: 9vh;
+    }
+
+    header {
+        width: 100vw;
+    }
+
+/* Ocultar el menú en pantallas pequeñas */
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+    .menu-icon {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Ocultar el menú de links por defecto */
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Mostrar el menú cuando el checkbox está marcado */
+        #menu-toggle:checked + .menu-icon + .menu .links {
+            display: flex;
+            background-color: rgba(10, 20, 29, 0.8);
+    }
+
+    .links li {
+        margin: 10px 0;
+        background: var(--color-terciario-2);
+    }
+
+
+
+
+    .main-container .row {
+        margin: 2vh;
+        height: 100%;
+        width: calc(100%-2vh);
+    }
+
+    .main-container .antho {
+        height: 100%;
+    }
+
+
+.antho {
+    display: block;
+}
+
+.antho .informacion {
+    width: 100%;
+
+}
+
+.antho .imagen-antho {
+    margin-top: 30px;
+    width: 250px;
+    height: 250px;
+}
+
+.antho .imagen-antho img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.card-container {
+    display: block;
+}
+
+.card {
+    margin: 30px 0px 30px 0px;
+}
+
+
+
+
+
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .red-social {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/*Fin del mediaqueary*/
