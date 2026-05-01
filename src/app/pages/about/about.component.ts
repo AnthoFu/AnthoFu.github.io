@@ -2,6 +2,8 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseService } from '../../services/course.service';
 import { Course } from '../../models/course.model';
+import { ExperienceService } from '../../services/experience.service';
+import { Experience } from '../../models/experience.model';
 
 interface TechItem {
   name: string;
@@ -24,7 +26,9 @@ interface TechCategory {
 })
 export class AboutComponent implements OnInit {
   private courseService = inject(CourseService);
+  private experienceService = inject(ExperienceService);
   courses: Course[] = [];
+  experiences: Experience[] = [];
 
   techStack: TechCategory[] = [
     {
@@ -91,6 +95,10 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.courseService.getCourses().subscribe(courses => {
       this.courses = courses;
+    });
+
+    this.experienceService.getExperiences().subscribe(experiences => {
+      this.experiences = experiences;
     });
   }
 }

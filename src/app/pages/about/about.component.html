@@ -38,34 +38,19 @@
 <section class="experience" id="experience">
   <div class="content">
     <h2 class="section-title">Experience</h2>
-    <div class="experience-card">
+    <div class="experience-card" *ngFor="let exp of experiences">
       <div class="experience-header">
-        <div class="company-logo">
-            <img src="images/logo_canguro.png" alt="Canguro Venezuela logo">
+        <div class="company-logo" *ngIf="exp.logoUrl">
+            <img [src]="exp.logoUrl" [alt]="exp.company + ' logo'">
           </div>
         <div class="company-info">
-          <h3>Canguro Venezuela</h3>
-          <p>Jr. Full-Stack Developer</p>
+          <h3>{{ exp.company }}</h3>
+          <p>{{ exp.position }}</p>
         </div>
       </div>
-      <p class="experience-date">Nov. 2024 - Oct. 2025</p>
+      <p class="experience-date">{{ exp.period }}</p>
       <p class="experience-description">
-        I actively participated in the migration of the Odoo 15 ERP system to Odoo 17, collaborating in the implementation of new key functionalities. I performed maintenance and optimization of existing web applications (Angular), resolving bugs and improving the user experience. I designed and implemented custom automation rules in Odoo 17 for user and audit management. I optimized complex queries in SQL, BigQuery, and MongoDB databases to improve the performance of internal reports and developed ETL processes and scripts in Jupyter Notebooks (Python) for cleaning and standardizing data from different sources, ensuring the consistency of the information for later analysis and loading into the system.
-      </p>
-    </div>
-    <div class="experience-card">
-      <div class="experience-header">
-        <div class="company-logo">
-            <img src="images/logo_btc.png" alt="Banking Technologies Consulting logo">
-          </div>
-        <div class="company-info">
-          <h3>Banking Technologies Consulting</h3>
-          <p>Jr. Full-Stack Developer</p>
-        </div>
-      </div>
-      <p class="experience-date">Oct. 2025 - Present</p>
-      <p class="experience-description">
-        Aquí irá más experiencia sobre BTC.......
+        {{ exp.description }}
       </p>
     </div>
     <div class="experience-card placeholder">
