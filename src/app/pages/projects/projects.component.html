@@ -1,9 +1,9 @@
 
 <section class="projects-hero">
   <div class="hero-content">
-    <h1 class="page-title">Projects</h1>
+    <h1 class="page-title">{{ 'PROJECTS.TITLE' | translate }}</h1>
     <div class="subtitle-box">
-      <p>Open source projects I have worked on or maintained.</p>
+      <p>{{ 'PROJECTS.SUBTITLE' | translate }}</p>
     </div>
   </div>
 </section>
@@ -12,7 +12,7 @@
   <!-- Active Projects Section -->
   <section class="year-section bg-white" *ngIf="activeProjects.length > 0">
     <div class="content">
-      <h2 class="year-title">I'm working on...</h2>
+      <h2 class="year-title">{{ 'PROJECTS.WORKING_ON' | translate }}</h2>
       
       <div class="slider-wrapper">
         <div class="cards-slider" 
@@ -22,12 +22,12 @@
              [style.transform]="'translateX(' + (-activeProjectsIndex * 100) + 'vw)'">
           <div class="card-slide" *ngFor="let project of activeProjects">
             <div class="project-card">
-              <div class="active-badge">In Progress</div>
+              <div class="active-badge">{{ 'PROJECTS.IN_PROGRESS' | translate }}</div>
               <img [src]="project.images[0]" [alt]="project.title" class="card-image">
               <div class="card-content">
                 <h3 class="card-title">{{ project.title }}</h3>
-                <p class="card-description">{{ project.shortDescription }}</p>
-                <a [routerLink]="['/projects', project.slug]" class="card-button">View Project</a>
+                <p class="card-description">{{ project.shortDescription | translateData }}</p>
+                <a [routerLink]="['/projects', project.slug]" class="card-button">{{ 'PROJECTS.VIEW_PROJECT' | translate }}</a>
               </div>
             </div>
           </div>
@@ -63,8 +63,8 @@
               <img [src]="project.images[0]" [alt]="project.title" class="card-image">
               <div class="card-content">
                 <h3 class="card-title">{{ project.title }}</h3>
-                <p class="card-description">{{ project.shortDescription }}</p>
-                <a [routerLink]="['/projects', project.slug]" class="card-button">View Project</a>
+                <p class="card-description">{{ project.shortDescription | translateData }}</p>
+                <a [routerLink]="['/projects', project.slug]" class="card-button">{{ 'PROJECTS.VIEW_PROJECT' | translate }}</a>
               </div>
             </div>
           </div>

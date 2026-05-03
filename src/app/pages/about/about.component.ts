@@ -5,6 +5,9 @@ import { Course } from '../../models/course.model';
 import { ExperienceService } from '../../services/experience.service';
 import { Experience } from '../../models/experience.model';
 
+import { TranslatePipe } from '../../pipes/translate.pipe';
+import { TranslateDataPipe } from '../../pipes/translate-data.pipe';
+
 interface TechItem {
   name: string;
   icon: string;
@@ -13,14 +16,14 @@ interface TechItem {
 }
 
 interface TechCategory {
-  title: string;
+  titleKey: string;
   items: TechItem[];
 }
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe, TranslateDataPipe],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
@@ -32,7 +35,7 @@ export class AboutComponent implements OnInit {
 
   techStack: TechCategory[] = [
     {
-      title: 'Languages',
+      titleKey: 'TECH_STACK.LANGUAGES',
       items: [
         { name: 'JavaScript', icon: 'devicon-javascript-plain', color: '#F7DF1E', textColor: '#000' },
         { name: 'TypeScript', icon: 'devicon-typescript-plain', color: '#3178C6', textColor: '#FFF' },
@@ -41,7 +44,7 @@ export class AboutComponent implements OnInit {
       ]
     },
     {
-      title: 'Front-end',
+      titleKey: 'TECH_STACK.FRONTEND',
       items: [
         { name: 'Angular', icon: 'devicon-angular-plain', color: '#DD0031', textColor: '#FFF' },
         { name: 'React', icon: 'devicon-react-original', color: '#61DAFB', textColor: '#000' },
@@ -52,7 +55,7 @@ export class AboutComponent implements OnInit {
       ]
     },
     {
-      title: 'Back-end',
+      titleKey: 'TECH_STACK.BACKEND',
       items: [
         { name: 'Node.js', icon: 'devicon-nodejs-plain', color: '#339933', textColor: '#FFF' },
         { name: 'Odoo', icon: 'images/odoo_logo.svg', color: '#D1C4CD', textColor: '#714B67' },
@@ -60,7 +63,7 @@ export class AboutComponent implements OnInit {
       ]
     },
     {
-      title: 'Databases',
+      titleKey: 'TECH_STACK.DATABASES',
       items: [
         { name: 'MongoDB', icon: 'devicon-mongodb-plain', color: '#47A248', textColor: '#FFF' },
         { name: 'PostgreSQL', icon: 'devicon-postgresql-plain', color: '#4169E1', textColor: '#FFF' },
@@ -68,7 +71,7 @@ export class AboutComponent implements OnInit {
       ]
     },
     {
-      title: 'Cloud y DevOps',
+      titleKey: 'TECH_STACK.CLOUD_DEVOPS',
       items: [
         { name: 'Amazon S3', icon: 'devicon-amazonwebservices-plain-wordmark', color: '#FF9900', textColor: '#000' },
         { name: 'AWS Lambda', icon: 'devicon-amazonwebservices-plain-wordmark', color: '#FF9900', textColor: '#000' },
@@ -78,7 +81,7 @@ export class AboutComponent implements OnInit {
       ]
     },
     {
-      title: 'Tools and methodologies',
+      titleKey: 'TECH_STACK.TOOLS',
       items: [
         { name: 'Figma', icon: 'devicon-figma-plain', color: '#F24E1E', textColor: '#FFF' },
         { name: 'Expo', icon: 'devicon-expo-original', color: '#000', textColor: '#FFF' },

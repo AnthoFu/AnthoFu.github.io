@@ -4,10 +4,13 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project.model';
 
+import { TranslatePipe } from '../../pipes/translate.pipe';
+import { TranslateDataPipe } from '../../pipes/translate-data.pipe';
+
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslatePipe, TranslateDataPipe],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss'
 })

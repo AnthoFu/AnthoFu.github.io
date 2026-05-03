@@ -9,7 +9,10 @@ export class CourseService {
   private courses: Course[] = [
     {
       id: '16',
-      title: 'Curso de JavaScript Engine (V8) y el Navegador',
+      title: {
+        en: 'JavaScript Engine (V8) and the Browser Course',
+        es: 'Curso de JavaScript Engine (V8) y el Navegador'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Sep. 2025',
@@ -17,7 +20,10 @@ export class CourseService {
     },
     {
       id: '15',
-      title: 'Curso de Estructuras de Datos con JavaScript',
+      title: {
+        en: 'Data Structures with JavaScript Course',
+        es: 'Curso de Estructuras de Datos con JavaScript'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Ago. 2025',
@@ -25,7 +31,10 @@ export class CourseService {
     },
     {
       id: '14',
-      title: 'Curso de Asincronismo con JavaScript 2022',
+      title: {
+        en: 'Asynchronism with JavaScript Course 2022',
+        es: 'Curso de Asincronismo con JavaScript 2022'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Jul. 2025',
@@ -33,7 +42,10 @@ export class CourseService {
     },
     {
       id: '13',
-      title: 'Curso de Fundamentos de JavaScript',
+      title: {
+        en: 'JavaScript Fundamentals Course',
+        es: 'Curso de Fundamentos de JavaScript'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Jul. 2025',
@@ -41,7 +53,10 @@ export class CourseService {
     },
     {
       id: '12',
-      title: 'Curso de Closures y Scope en JavaScript',
+      title: {
+        en: 'Closures and Scope in JavaScript Course',
+        es: 'Curso de Closures y Scope en JavaScript'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Jul. 2025',
@@ -49,7 +64,10 @@ export class CourseService {
     },
     {
       id: '11',
-      title: 'Curso de API REST con Javascript: Fundamentos',
+      title: {
+        en: 'REST API with Javascript Course: Fundamentals',
+        es: 'Curso de API REST con Javascript: Fundamentos'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Jul. 2025',
@@ -57,7 +75,10 @@ export class CourseService {
     },
     {
       id: '10',
-      title: 'Audiocurso de Frameworks y Arquitecturas Frontend: Casos de Estudio',
+      title: {
+        en: 'Frontend Frameworks and Architectures Audio-course: Case Studies',
+        es: 'Audiocurso de Frameworks y Arquitecturas Frontend: Casos de Estudio'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Jun. 2025',
@@ -65,7 +86,10 @@ export class CourseService {
     },
     {
       id: '9',
-      title: 'Curso de Introducción a AWS: Fundamentos de Cloud Computing',
+      title: {
+        en: 'Introduction to AWS Course: Cloud Computing Fundamentals',
+        es: 'Curso de Introducción a AWS: Fundamentos de Cloud Computing'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Jun. 2025',
@@ -73,7 +97,10 @@ export class CourseService {
     },
     {
       id: '8',
-      title: 'Curso de Manipulación de Arrays en JavaScript',
+      title: {
+        en: 'Array Manipulation in JavaScript Course',
+        es: 'Curso de Manipulación de Arrays en JavaScript'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'May. 2025',
@@ -81,7 +108,10 @@ export class CourseService {
     },
     {
       id: '7',
-      title: 'Curso de Gestión de Proyectos con Jira',
+      title: {
+        en: 'Project Management with Jira Course',
+        es: 'Curso de Gestión de Proyectos con Jira'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'May. 2025',
@@ -89,7 +119,10 @@ export class CourseService {
     },
     {
       id: '6',
-      title: 'Curso de Fundamentos de Ingeniería de Software',
+      title: {
+        en: 'Software Engineering Fundamentals Course',
+        es: 'Curso de Fundamentos de Ingeniería de Software'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'May. 2025',
@@ -97,7 +130,10 @@ export class CourseService {
     },
     {
       id: '5',
-      title: 'Curso de React.js',
+      title: {
+        en: 'React.js Course',
+        es: 'Curso de React.js'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'May. 2025',
@@ -105,7 +141,10 @@ export class CourseService {
     },
     {
       id: '4',
-      title: 'Curso de Angular: Creación de Aplicaciones Web',
+      title: {
+        en: 'Angular Course: Creating Web Applications',
+        es: 'Curso de Angular: Creación de Aplicaciones Web'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Abr. 2025',
@@ -113,7 +152,10 @@ export class CourseService {
     },
     {
       id: '3',
-      title: 'Curso de Animaciones con CSS',
+      title: {
+        en: 'CSS Animations Course',
+        es: 'Curso de Animaciones con CSS'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Abr. 2025',
@@ -121,7 +163,10 @@ export class CourseService {
     },
     {
       id: '2',
-      title: 'Curso de Diseño para Developers',
+      title: {
+        en: 'Design for Developers Course',
+        es: 'Curso de Diseño para Developers'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Abr. 2025',
@@ -129,7 +174,10 @@ export class CourseService {
     },
     {
       id: '1',
-      title: 'Curso de JavaScript: Manipulación del DOM',
+      title: {
+        en: 'JavaScript Course: DOM Manipulation',
+        es: 'Curso de JavaScript: Manipulación del DOM'
+      },
       platform: 'Platzi',
       issuer: 'Platzi',
       date: 'Mar. 2025',

@@ -1,22 +1,34 @@
-import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, HostListener, Inject, PLATFORM_ID, inject } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
+import { TranslatePipe } from './pipes/translate.pipe';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule, FooterComponent],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule, FooterComponent, TranslatePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  private router = inject(Router);
+  
   isMenuOpen = false;
   isScrolled = false;
   isVisible = true;
+  isLanguageSelectionPage = false;
   private lastScrollTop = 0;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      const url = event.urlAfterRedirects || event.url;
+      this.isLanguageSelectionPage = url === '/' || url === '/language';
+    });
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

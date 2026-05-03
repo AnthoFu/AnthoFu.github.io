@@ -6,16 +6,11 @@ export interface Project {
   featured?: boolean;
   period?: string;
   title_color?: string;
-  shortDescription: string;
-  fullDescription: string;
+  shortDescription: string | Record<'en' | 'es', string>;
+  fullDescription: string | Record<'en' | 'es', string>;
   technologies: string[];
   images: string[]; // Idealmente exactamente 3 fotos
   selectedImageIndex: number;
   liveDemo?: string;
   repository?: string;
-  // Campos antiguos para retrocompatibilidad opcional
-  description?: string;
-  challenge?: string;
-  solution?: string;
-  role?: string;
 }

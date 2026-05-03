@@ -21,7 +21,7 @@
       <h1 class="project-title">{{ project.title }}</h1>
       
       <div class="project-description">
-        <p>{{ project.fullDescription }}</p>
+        <p>{{ project.fullDescription | translateData }}</p>
       </div>
 
       <div class="tech-stack">
@@ -34,22 +34,22 @@
       <div class="actions">
         <a *ngIf="project.repository" [href]="project.repository" target="_blank" class="btn-action">
           <i class="fa-brands fa-github"></i>
-          View Code
+          {{ 'PROJECTS.REPOSITORY' | translate }}
         </a>
         <a *ngIf="project.liveDemo" [href]="project.liveDemo" target="_blank" class="btn-action">
           <i class="fa-solid fa-rocket"></i>
-          Live Demo
+          {{ 'PROJECTS.LIVE_DEMO' | translate }}
         </a>
       </div>
     </div>
 
     <a routerLink="/projects" class="close-btn">
-      <span class="back-icon">←</span> Back
+      <span class="back-icon">←</span> {{ 'COMMON.BACK' | translate }}
     </a>
   </div>
 </div>
 
 <div class="not-found" *ngIf="!project">
-  <p>Project not found.</p>
-  <a routerLink="/projects">Back to projects</a>
+  <p>{{ 'PROJECTS.NOT_FOUND' | translate }}</p>
+  <a routerLink="/projects">{{ 'COMMON.BACK' | translate }}</a>
 </div>

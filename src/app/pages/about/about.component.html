@@ -1,11 +1,11 @@
 
 <section class="about-me" id="about">
   <div class="content">
-    <h1 class="page-title">About Me</h1>
+    <h1 class="page-title">{{ 'ABOUT.TITLE' | translate }}</h1>
     <div class="about-card">
       <img src="images/Anthofu_photo-2.jpeg" alt="AnthoFu profile photo" class="profile-photo">
       <p>
-        Since 2022, I have immersed myself in development, focusing on the front-end. Delving into tools like Angular, React, TypeScript, and styling with TailwindCSS. Curiosity has also led me to explore the backend with Python and NodeJS and to manage SQL and noSQL databases.
+        {{ 'ABOUT.BIO' | translate }}
       </p>
     </div>
   </div>
@@ -13,10 +13,10 @@
 
 <section class="tech-stack" id="skills">
   <div class="content">
-    <h2 class="section-title">Tech Stack</h2>
+    <h2 class="section-title">{{ 'ABOUT.TECH_STACK' | translate }}</h2>
     <div class="stack-container">
       <div class="stack-category" *ngFor="let category of techStack">
-        <h3>{{ category.title }}</h3>
+        <h3>{{ category.titleKey | translate }}</h3>
         <div class="tags">
           <span class="tag" *ngFor="let item of category.items" 
                 [style.background-color]="item.color" 
@@ -37,7 +37,7 @@
 
 <section class="experience" id="experience">
   <div class="content">
-    <h2 class="section-title">Experience</h2>
+    <h2 class="section-title">{{ 'ABOUT.EXPERIENCE' | translate }}</h2>
     <div class="experience-card" *ngFor="let exp of experiences">
       <div class="experience-header">
         <div class="company-logo" *ngIf="exp.logoUrl">
@@ -45,12 +45,12 @@
           </div>
         <div class="company-info">
           <h3>{{ exp.company }}</h3>
-          <p>{{ exp.position }}</p>
+          <p>{{ exp.position | translateData }}</p>
         </div>
       </div>
       <p class="experience-date">{{ exp.period }}</p>
       <p class="experience-description">
-        {{ exp.description }}
+        {{ exp.description | translateData }}
       </p>
     </div>
     <div class="experience-card placeholder">
@@ -59,13 +59,13 @@
           <i class="fas fa-briefcase"></i>
         </div>
         <div class="company-info">
-          <h3>More experience</h3>
-          <p>Coming soon...</p>
+          <h3>{{ 'ABOUT.MORE_EXPERIENCE' | translate }}</h3>
+          <p>{{ 'ABOUT.COMING_SOON' | translate }}...</p>
         </div>
       </div>
-      <p class="experience-date">Coming soon</p>
+      <p class="experience-date">{{ 'ABOUT.COMING_SOON' | translate }}</p>
       <p class="experience-description">
-        I am currently expanding my knowledge and working on new professional challenges. Stay tuned for updates!
+        {{ 'ABOUT.COMING_SOON_DESC' | translate }}
       </p>
     </div>
   </div>
@@ -73,15 +73,15 @@
 
 <section class="certifications" id="certifications">
   <div class="content">
-    <h2 class="section-title">Certifications & Courses</h2>
+    <h2 class="section-title">{{ 'ABOUT.CERTIFICATIONS' | translate }}</h2>
     <div class="courses-grid">
       <div class="course-card" *ngFor="let course of courses">
         <div class="course-image" *ngIf="course.imageUrl">
-          <img [src]="course.imageUrl" [alt]="course.title">
+          <img [src]="course.imageUrl" [alt]="course.title | translateData">
         </div>
         <div class="course-info">
           <div class="course-header">
-            <h3>{{ course.title }}</h3>
+            <h3>{{ course.title | translateData }}</h3>
             <span class="course-date">{{ course.date }}</span>
           </div>
           <p class="course-issuer">{{ course.platform }} - {{ course.issuer }}</p>
@@ -89,7 +89,7 @@
             <span class="skill-tag" *ngFor="let skill of course.skills">{{ skill }}</span>
           </div>
           <a [href]="course.certificateUrl" target="_blank" class="certificate-link" *ngIf="course.certificateUrl">
-            <i class="fa-solid fa-certificate"></i> View Certificate
+            <i class="fa-solid fa-certificate"></i> {{ 'ABOUT.VIEW_CERTIFICATE' | translate }}
           </a>
         </div>
       </div>

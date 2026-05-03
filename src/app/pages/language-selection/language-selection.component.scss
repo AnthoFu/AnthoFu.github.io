@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'RetroFont';
+    src: url('../../../assets/fonts/Mono-Bold.ttf');
+}
+
+.game-screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, var(--azul-1) 0%, var(--azul-2) 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Effect - subtle grid for that retro feel */
+.stars-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(243, 146, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(243, 146, 0, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.5;
+}
+
+.menu-wrapper {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.game-frame {
+    background: var(--azul-1);
+    padding: 6px;
+    border: 4px solid var(--blanco);
+    box-shadow: 
+        0 0 0 4px var(--azul-2),
+        0 0 20px rgba(243, 146, 0, 0.3),
+        15px 15px 0px rgba(0, 0, 0, 0.4);
+    image-rendering: pixelated;
+    width: 420px;
+    max-width: 90vw;
+}
+
+.frame-content {
+    border: 2px solid var(--blanco);
+    padding: 2.5rem;
+    background: var(--azul-2);
+}
+
+.menu-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.pixel-text {
+    font-family: 'RetroFont', 'Mono Bold', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title {
+    color: var(--naranja);
+    font-size: 1.6rem;
+    margin: 0;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.8);
+}
+
+.divider {
+    height: 4px;
+    background: var(--blanco);
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 0 var(--azul-2);
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.menu-item {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    transition: all 0.2s;
+
+    .selector {
+        color: var(--naranja);
+        font-size: 1.5rem;
+        visibility: hidden;
+        text-shadow: 2px 2px 0px rgba(0,0,0,0.8);
+    }
+
+    .lang-name {
+        color: var(--blanco);
+        font-size: 1.3rem;
+        display: block;
+        font-weight: 700;
+    }
+
+    .sub-text {
+        color: rgba(242, 242, 242, 0.5);
+        font-size: 0.8rem;
+        font-family: 'RetroFont', monospace;
+    }
+
+    &:hover {
+        .selector {
+            visibility: visible;
+            animation: moveSide 0.5s infinite;
+        }
+
+        .lang-name {
+            color: var(--naranja);
+            text-shadow: 0 0 8px rgba(243, 146, 0, 0.4);
+        }
+
+        .sub-text {
+            color: var(--blanco);
+        }
+    }
+}
+
+.footer-hint {
+    color: var(--blanco);
+    font-size: 1.1rem;
+}
+
+.hint-text {
+    color: var(--naranja);
+}
+
+.blink {
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+@keyframes moveSide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+@media (max-width: 480px) {
+    .game-frame {
+        width: 320px;
+    }
+    .title {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,36 @@
+<div class="game-screen">
+    <div class="stars-bg"></div>
+    
+    <div class="menu-wrapper">
+        <div class="game-frame">
+            <div class="frame-content">
+                <header class="menu-header">
+                    <h1 class="pixel-text title">SELECT LANGUAGE</h1>
+                    <div class="divider"></div>
+                </header>
+
+                <div class="menu-options">
+                    <button class="menu-item" (click)="selectLanguage('en')">
+                        <span class="selector">▶</span>
+                        <div class="option-content">
+                            <span class="pixel-text lang-name">ENGLISH</span>
+                            <span class="sub-text">Press Start</span>
+                        </div>
+                    </button>
+
+                    <button class="menu-item" (click)="selectLanguage('es')">
+                        <span class="selector">▶</span>
+                        <div class="option-content">
+                            <span class="pixel-text lang-name">ESPAÑOL</span>
+                            <span class="sub-text">Pulsar Start</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer-hint">
+            <p class="pixel-text blink">SELECT YOUR <span class="hint-text">HERO</span></p>
+        </footer>
+    </div>
+</div>

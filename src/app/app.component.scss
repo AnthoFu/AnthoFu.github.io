@@ -284,4 +284,26 @@
 
 main {
   padding-top: 60px; // To prevent content from going under the fixed header
+  
+  &.no-padding {
+    padding-top: 0;
+  }
+}
+
+.lang-switch-desktop {
+    color: #3b82f6 !important;
+    font-weight: 700 !important;
+    &::after {
+        background-color: #3b82f6 !important;
+    }
+    &:hover {
+        color: #60a5fa !important;
+    }
+}
+
+.lang-switch-mobile {
+    color: #3b82f6 !important;
+    i {
+        color: #3b82f6 !important;
+    }
 }

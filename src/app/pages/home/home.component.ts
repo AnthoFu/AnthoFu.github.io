@@ -1,18 +1,22 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SwipeableDirective } from '../../directives/swipeable.directive';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project.model';
+import { TranslatePipe } from '../../pipes/translate.pipe';
+import { TranslateDataPipe } from '../../pipes/translate-data.pipe';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, SwipeableDirective],
+  imports: [CommonModule, RouterLink, SwipeableDirective, TranslatePipe, TranslateDataPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+  private projectService = inject(ProjectService);
+  
   activeProjectSlide = 0;
   activeAboutSlide = 0;
 
@@ -29,7 +33,6 @@ export class HomeComponent implements OnInit {
   ];
 
   constructor(
-    private projectService: ProjectService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 

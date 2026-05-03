@@ -5,10 +5,13 @@ import { SwipeableDirective } from '../../directives/swipeable.directive';
 import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project.model';
 
+import { TranslatePipe } from '../../pipes/translate.pipe';
+import { TranslateDataPipe } from '../../pipes/translate-data.pipe';
+
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, SwipeableDirective, RouterModule],
+  imports: [CommonModule, SwipeableDirective, RouterModule, TranslatePipe, TranslateDataPipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

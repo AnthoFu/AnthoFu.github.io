@@ -5,13 +5,13 @@
         <h1 class="logo-text">
           Anth<span class="icon-container"><img src="images/Anthofu_Icon.png" alt="AnthoFu Icon"></span>u
         </h1>
-        <p class="logo-motto">Crafting digital experiences.</p>
+        <p class="logo-motto">{{ 'FOOTER.MOTTO' | translate }}</p>
       </div>
 
       <nav class="footer-nav">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
-        <a routerLink="/about" routerLinkActive="active">ABOUT ME</a>
-        <a routerLink="/projects" routerLinkActive="active">PROJECTS</a>
+        <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ 'NAV.HOME' | translate | uppercase }}</a>
+        <a routerLink="/about" routerLinkActive="active">{{ 'NAV.ABOUT' | translate | uppercase }}</a>
+        <a routerLink="/projects" routerLinkActive="active">{{ 'NAV.PROJECTS' | translate | uppercase }}</a>
       </nav>
     </div>
 
@@ -19,7 +19,7 @@
 
     <div class="footer-bottom">
       <div class="footer-info">
-        <p>&copy; 2026 AnthoFu. All rights reserved.</p>
+        <p>&copy; 2026 AnthoFu. {{ 'FOOTER.RIGHTS' | translate }}</p>
       </div>
       
       <div class="footer-extra">
@@ -27,7 +27,7 @@
           <a href="https://www.linkedin.com/in/anthofu/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://github.com/anthofu" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
-        <p class="built-with">Built with Angular 18 & <span class="heart">❤️</span></p>
+        <p class="built-with">{{ 'FOOTER.BUILT_WITH' | translate }} <span class="heart">❤️</span></p>
       </div>
     </div>
   </div>

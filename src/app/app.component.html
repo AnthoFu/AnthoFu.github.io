@@ -1,4 +1,4 @@
-<header class="header" [ngClass]="{'menu-open': isMenuOpen, 'scrolled': isScrolled, 'header-hidden': !isVisible}">
+<header class="header" *ngIf="!isLanguageSelectionPage" [ngClass]="{'menu-open': isMenuOpen, 'scrolled': isScrolled, 'header-hidden': !isVisible}">
   <div class="hamburger-menu" (click)="toggleMenu()">
     <div class="line" [ngClass]="{'open': isMenuOpen}"></div>
     <div class="line" [ngClass]="{'open': isMenuOpen}"></div>
@@ -11,28 +11,34 @@
 
   <nav class="desktop-nav">
     <ul class="nav-links-desktop">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
-      <li><a routerLink="/about" routerLinkActive="active">ABOUT ME</a></li>
-      <li><a routerLink="/projects" routerLinkActive="active">PROJECTS</a></li>
+      <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ 'NAV.HOME' | translate | uppercase }}</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">{{ 'NAV.ABOUT' | translate | uppercase }}</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">{{ 'NAV.PROJECTS' | translate | uppercase }}</a></li>
+      <li><a routerLink="/language" class="lang-switch-desktop">{{ 'NAV.LANGUAGE' | translate | uppercase }}</a></li>
     </ul>
   </nav>
 </header>
 
-<nav class="side-nav" [ngClass]="{'open': isMenuOpen}">
+<nav class="side-nav" [ngClass]="{'open': isMenuOpen}" *ngIf="!isLanguageSelectionPage">
   <ul class="nav-links">
     <li>
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
-        <i class="fa-solid fa-house"></i> HOME
+      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+        <i class="fa-solid fa-house"></i> {{ 'NAV.HOME' | translate | uppercase }}
       </a>
     </li>
     <li>
       <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
-        <i class="fa-solid fa-user"></i> ABOUT ME
+        <i class="fa-solid fa-user"></i> {{ 'NAV.ABOUT' | translate | uppercase }}
       </a>
     </li>
     <li>
       <a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">
-        <i class="fa-solid fa-code"></i> PROJECTS
+        <i class="fa-solid fa-code"></i> {{ 'NAV.PROJECTS' | translate | uppercase }}
+      </a>
+    </li>
+    <li>
+      <a routerLink="/language" (click)="closeMenu()" class="lang-switch-mobile">
+        <i class="fa-solid fa-language"></i> {{ 'NAV.LANGUAGE' | translate | uppercase }}
       </a>
     </li>
   </ul>
@@ -47,9 +53,9 @@
   </div>
 </nav>
 
-<div class="overlay" *ngIf="isMenuOpen" (click)="closeMenu()"></div>
+<div class="overlay" *ngIf="isMenuOpen && !isLanguageSelectionPage" (click)="closeMenu()"></div>
 
-<div class="floating-contact">
+<div class="floating-contact" *ngIf="!isLanguageSelectionPage">
   <a href="https://github.com/AnthoFu" target="_blank" class="contact-circle">
     <i class="fa-brands fa-github"></i>
   </a>
@@ -61,8 +67,8 @@
   </a>
 </div>
 
-<main>
+<main [class.no-padding]="isLanguageSelectionPage">
   <router-outlet />
 </main>
 
-<app-footer></app-footer>
+<app-footer *ngIf="!isLanguageSelectionPage"></app-footer>
