@@ -76,7 +76,9 @@ export class ProjectService {
         es: "AnthoFu Chatter es una aplicación de comunicación bidireccional en tiempo real que integra un potente backend en NestJS con un cliente seguro basado en WebSockets. Aunque el núcleo es una arquitectura de e-commerce completa (Teslo Shop), su funcionalidad pública principal es el Chatter.\n\nComponentes Técnicos:\n- Backend (NestJS API): Una API RESTful segura con autenticación JWT, gestión de productos mediante TypeORM y PostgreSQL, y un módulo de WebSockets (Socket.io) totalmente integrado que utiliza Passport para la validación de conexiones.\n- Frontend (ws-client): Una SPA construida con Vite y TypeScript que gestiona flujos de autenticación reales, conexiones protegidas por token y control de sesiones (evitando conexiones duplicadas).\n- Interacción en Tiempo Real: El sistema permite el intercambio de mensajes instantáneos, actualizaciones de usuarios en línea y feedback visual/auditivo inmersivo.\n\nEste proyecto demuestra la capacidad de crear sistemas escalables donde la seguridad del backend y la interactividad del frontend convergen para ofrecer una experiencia social fluida y profesional, integrando el motor de 04-teslo-shop y la interfaz de 05-ws-client."
       },
       technologies: ["NestJS", "PostgreSQL", "TypeORM", "Socket.io", "Passport", "JWT", "TypeScript", "Vite"],
-      images: ["images/banner-pc.png", "images/banner-cel.png", "static/products/100042301_0_2000.jpg"],
+      images: [
+        "images/anthofu_chatter/anthofu_chatter_login.png", 
+        "images/anthofu_chatter/anthofu_chatter_chat.png",],
       selectedImageIndex: 0,
       repository: "https://github.com/AnthoFu/04-teslo-shop",
       liveDemo: "https://anthofu-chatter.netlify.app"
