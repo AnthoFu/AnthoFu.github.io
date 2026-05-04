@@ -51,7 +51,11 @@ export class ProjectService {
         es: 'Anthocito es un bot de Discord integral desarrollado para gestionar servidores, proporcionar herramientas de utilidad y ofrecer minijuegos interactivos. Lo que comenzó como un proyecto de JavaScript evolucionó hacia una aplicación TypeScript robusta y segura.\n\nAspectos Técnicos Destacados:\nDiseñé una arquitectura altamente modular utilizando controladores dinámicos para comandos de barra y eventos de la API de Discord. Esto asegura que el código se mantenga limpio y fácilmente extensible a medida que se agregan nuevas funciones. La persistencia de datos se gestiona a través de esquemas de MongoDB y Mongoose, proporcionando un almacenamiento confiable para las configuraciones del servidor y las estadísticas de los usuarios.\n\nResultados:\nEl proyecto actualmente sirve como una base sólida y lista para producción con comandos de moderación y utilidad totalmente funcionales. Está optimizado para el despliegue continuo en plataformas en la nube como Render, demostrando un ciclo de vida de desarrollo backend completo, desde las pruebas locales hasta la producción en vivo.'
       },
       technologies: ['TypeScript', 'Node.js', 'Discord.js', 'MongoDB', 'Mongoose'],
-      images: ['images/anthocito-banner.png', 'images/anthofu/Anthofu_Icon_2.png'],
+      images: [
+        'images/anthocito/anthocito_banner.png', 
+        'images/anthocito/anthocito_help.png',
+        'images/anthocito/anthocito_new_order.png'
+      ],
       selectedImageIndex: 0,
       repository: 'https://github.com/anthofu/anthocito'
     },
