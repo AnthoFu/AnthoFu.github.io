@@ -125,7 +125,11 @@ export class ProjectService {
         es: 'Desarrollada como el proyecto principal para un curso intensivo de Angular 17, esta aplicación es un frontend de comercio electrónico totalmente funcional. Se conecta a la perfección con la FakeAPI de Platzi para obtener y renderizar un catálogo completo de productos. Los usuarios pueden explorar artículos, filtrar por categorías, ver páginas detalladas de productos e interactuar con un carrito de compras en tiempo real donde el total se actualiza automáticamente.\n\nAspectos Técnicos Destacados:\nEste proyecto muestra la implementación de las características modernas de Angular 17. Utilicé Signals para una gestión de estado eficiente y reactiva en todos los componentes, permitiendo actualizaciones fluidas del carrito. La interfaz de usuario se beneficia de la sintaxis moderna de flujo de control (@if, @for, @switch) para plantillas más limpias y legibles. Además, me enfoqué en la optimización del rendimiento del frontend mediante la implementación de técnicas de enrutamiento avanzadas como Lazy Loading y pre-búsqueda de componentes. La arquitectura es altamente modular, basándose en componentes reutilizables, tuberías personalizadas y una robusta inyección de dependencias.'
       },
       technologies: ['Angular 17', 'TypeScript', 'REST API', 'Signals', 'Vercel'],
-      images: ['images/ecommerce-banner-pc.png', 'images/ecommerce-banner-cel.png'],
+      images: [
+        'images/anthos_shop/anthos_shop_products.png',
+        'images/anthos_shop/anthos_shop_cart.png',
+        'images/anthos_shop/anthos_shop_detail.png',
+      ],
       selectedImageIndex: 0,
       liveDemo: 'https://anthofu-ecommerce.vercel.app',
       repository: 'https://github.com/AnthoFu/Angular-17-Platzi'
