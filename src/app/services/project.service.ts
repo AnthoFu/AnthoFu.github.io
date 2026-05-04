@@ -150,7 +150,11 @@ export class ProjectService {
         es: 'Como desarrollador principal, guié a un equipo durante cuatro meses clave para modernizar la presencia digital de la Universidad Nacional Experimental de la Gran Caracas (UNEXCA), en asociación con la Universidad Nacional Experimental Francisco de Miranda.\n\nNuestro objetivo principal fue construir una plataforma intuitiva y atractiva. Me enfoqué en liderar al equipo para ofrecer características que empoderen a la comunidad universitaria:\n\n• Información en Tiempo Real: Integramos la API de Meta para obtener y mostrar las últimas noticias de las redes sociales directamente en la página de inicio.\n• Navegación Simplificada: Estructuramos una interfaz clara para que los usuarios puedan encontrar fácilmente Programas Académicos, Noticias y todas las ubicaciones del campus.\n• Identidad Institucional: Desarrollamos secciones dedicadas que destacan los valores, la historia y la misión de la universidad.\n\nConstruido íntegramente con tecnologías web "vanilla", este proyecto está en constante evolución, sentando con éxito las bases para futuras funcionalidades como una biblioteca virtual de tesis.'
       },
       technologies: ['HTML5', 'CSS', 'JavaScript', 'Meta API', 'Project Management'],
-      images: ['images/unexca-banner-pc.png', 'images/unexca-banner-cel.png'],
+      images: [
+        'images/unexca_prototype/unexca_prototype_home.png', 
+        'images/unexca_prototype/unexca_prototype_nucleos.png',
+        'images/unexca_prototype/unexca_prototype_programas_academicos.png'
+      ],
       selectedImageIndex: 0,
       liveDemo: 'https://unexca-website.netlify.app'
     },
