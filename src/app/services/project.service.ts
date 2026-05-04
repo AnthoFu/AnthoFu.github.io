@@ -18,8 +18,8 @@ export class ProjectService {
       featured: true,
       period: 'Sep 2025 - Present',
       shortDescription: {
-        en: 'Modernizing and optimizing my personal portfolio with Angular 18 and a focus on UX/UI.',
-        es: 'Modernizando y optimizando mi portafolio personal con Angular 18 y un enfoque en UX/UI.'
+        en: 'Modern professional portfolio optimized with Angular 18, focused on delivering a high-performance and seamless UX/UI experience.',
+        es: 'Portafolio profesional moderno optimizado con Angular 18, enfocado en ofrecer una experiencia de usuario (UX/UI) impecable y de alto rendimiento.'
       },
       fullDescription: {
         en: 'In this version, I am implementing advanced features like project grouping by year, unified design systems, and advanced animations using the latest Angular features.',
@@ -43,8 +43,8 @@ export class ProjectService {
       status: 'active',
       period: 'March 2024 - March 2026',
       shortDescription: {
-        en: 'A multifunctional Discord bot built with TypeScript and Node.js, featuring a modular architecture, dynamic command handling, and MongoDB integration.',
-        es: 'Un bot de Discord multifuncional construido con TypeScript y Node.js, con una arquitectura modular, manejo dinámico de comandos e integración con MongoDB.'
+        en: 'Multifunctional Discord assistant with modular TypeScript architecture and MongoDB integration for server automation.',
+        es: 'Asistente multifuncional para Discord con arquitectura modular en TypeScript e integración de base de datos MongoDB para automatización.'
       },
       fullDescription: {
         en: 'Anthocito is a comprehensive Discord bot developed to manage servers, provide utility tools, and offer interactive minigames. What started as a JavaScript project evolved into a robust, type-safe TypeScript application.\n\nTechnical Highlights:\nI designed a highly modular architecture utilizing dynamic handlers for slash commands and Discord API events. This ensures the codebase remains clean and easily extensible as new features are added. Data persistence is managed through MongoDB and Mongoose schemas, providing reliable storage for server configurations and user statistics. \n\nResults:\nThe project currently serves as a solid, production-ready foundation with fully functional moderation and utility commands. It is optimized for continuous deployment on cloud platforms like Render, demonstrating a complete backend development lifecycle from local testing to live production.',
@@ -68,8 +68,8 @@ export class ProjectService {
       featured: true,
       period: "January 2026 - February 2026",
       shortDescription: {
-        en: "A real-time bidirectional communication system integrating a robust NestJS backend with a secure WebSocket-based client.",
-        es: "Un sistema de comunicación bidireccional en tiempo real que integra un potente backend en NestJS con un cliente seguro basado en WebSockets."
+        en: 'Real-time chat with secure authentication, powered by a robust NestJS backend and seamless WebSocket communication.',
+        es: 'Chat en tiempo real con autenticación segura, impulsado por un backend robusto en NestJS y comunicación mediante WebSockets.'
       },
       fullDescription: {
         en: "AnthoFu Chatter is a real-time bidirectional communication application that integrates a powerful NestJS backend with a secure WebSocket-based client. While the core is a full e-commerce architecture (Teslo Shop), its primary public functionality is the Chatter.\n\nTechnical Components:\n- Backend (NestJS API): A secure RESTful API with JWT authentication, product management via TypeORM and PostgreSQL, and a fully integrated WebSocket module (Socket.io) using Passport for connection validation.\n- Frontend (ws-client): A SPA built with Vite and TypeScript that manages real authentication flows, token-protected connections, and session control (preventing duplicate connections).\n- Real-Time Interaction: The system enables instant message exchange, online user updates, and immersive visual/auditory feedback.\n\nThis project demonstrates the ability to create scalable systems where backend security and frontend interactivity converge to deliver a seamless and professional social experience, integrating the 04-teslo-shop engine and the 05-ws-client interface.",
@@ -92,8 +92,8 @@ export class ProjectService {
       featured: true,
       period: 'August 2025 - Present',
       shortDescription: {
-        en: 'I developed an offline-first mobile application using React Native and Zustand to help users manage multi-currency finances, track expenses, and reach savings goals with real-time exchange rates.',
-        es: 'Desarrollé una aplicación móvil "offline-first" utilizando React Native y Zustand para ayudar a los usuarios a gestionar finanzas multi-moneda, realizar un seguimiento de los gastos y alcanzar metas de ahorro con tipos de cambio en tiempo real.'
+        en: 'Offline-first mobile application for multi-currency financial management, built with React Native and Zustand.',
+        es: 'Aplicación móvil para gestión financiera offline-first, desarrollada con React Native, Zustand y soporte multimoneda.'
       },
       fullDescription: {
         en: 'FinanciaMe was born from the need for a robust, offline-first personal finance tool tailored for users in multi-currency environments, such as Venezuela. Young professionals often struggle to consolidate balances across different currencies (USD, VES, USDT). This application provides a unified view of their financial health by fetching real-time exchange rates while keeping all sensitive data securely on the device.\n\nTechnical Challenges:\nThe primary challenge was implementing a reliable offline-first architecture. I utilized Zustand with custom persistence logic and migration strategies to ensure data integrity across app updates. Managing complex financial logic, such as multi-currency transfers with commissions and automated recurring expenses, required a strict state management pattern to prevent balance inconsistencies. Additionally, creating a smooth, interactive user experience with Expo Reanimated and custom UI components was essential for user engagement.\n\nResults:\nThe final product is a high-performance, type-safe mobile application built with TypeScript and Expo. Key technologies include Zustand for lightweight state management and React Native Chart Kit for data visualization. The app features a comprehensive budgeting system, savings tracking, and an automated notification system for fixed expenses, making it a complete solution for modern financial management.',
@@ -117,8 +117,8 @@ export class ProjectService {
       status: 'completed',
       period: 'February 2025 - April 2025',
       shortDescription: {
-        en: 'A dynamic e-commerce frontend built with Angular 17, featuring external REST API integration, reactive state management with Signals, and category filtering.',
-        es: 'Un frontend de comercio electrónico dinámico construido con Angular 17, que cuenta con integración de API REST externa, gestión de estado reactiva con Signals y filtrado por categorías.'
+        en: 'Dynamic e-commerce frontend built with Angular 17 and Signals, focusing on reactivity and REST API consumption.',
+        es: 'E-commerce dinámico desarrollado con Angular 17 y Signals, enfocado en la reactividad y el consumo de APIs REST.'
       },
       fullDescription: {
         en: 'Developed as the main project for an intensive Angular 17 course, this application is a fully functional e-commerce frontend. It seamlessly connects to the Platzi FakeAPI to fetch and render a comprehensive product catalog. Users can explore items, filter by categories, view detailed product pages, and interact with a real-time shopping cart where the total automatically updates.\n\nTechnical Highlights:\nThis project showcases the implementation of modern Angular 17 features. I utilized Signals for efficient and reactive state management across components, allowing for seamless cart updates. The UI benefits from the modern control flow syntax (@if, @for, @switch) for cleaner, more readable templates. Additionally, I focused on frontend performance optimization by implementing advanced routing techniques like Lazy Loading and component prefetching. The architecture is highly modular, relying on reusable components, custom pipes, and robust dependency injection.',
@@ -142,8 +142,8 @@ export class ProjectService {
       status: 'completed',
       period: 'November 2024 - March 2025',
       shortDescription: {
-        en: 'I led the development of a modern, intuitive prototype website for UNEXCA, utilizing vanilla web technologies and integrating the Meta API for real-time social media updates.',
-        es: 'Lideré el desarrollo de un sitio web prototipo moderno e intuitivo para UNEXCA, utilizando tecnologías web "vanilla" e integrando la API de Meta para actualizaciones de redes sociales en tiempo real.'
+        en: 'Modern institutional platform for UNEXCA developed with native web technologies and live Meta API integration.',
+        es: 'Plataforma institucional moderna para UNEXCA desarrollada con tecnologías web nativas e integración en vivo de la API de Meta.'
       },
       fullDescription: {
         en: 'As the lead developer, I guided a team over four key months to modernize the digital presence of the Universidad Nacional Experimental de la Gran Caracas (UNEXCA), in association with Universidad Nacional Experimental Francisco de Miranda.\n\nOur main objective was to build an intuitive and engaging platform. I focused on leading the team to deliver features that empower the university community:\n\n• Real-Time Information: We integrated the Meta API to fetch and display the latest social media news directly on the homepage.\n• Simplified Navigation: We structured a clear interface so users can easily find Academic Programs, News, and all campus locations.\n• Institutional Identity: We developed dedicated sections highlighting the university\'s values, history, and mission.\n\nBuilt entirely with vanilla web technologies, this project is in constant evolution, successfully laying the foundation for future functionalities like a virtual thesis library.',
@@ -166,8 +166,8 @@ export class ProjectService {
       status: 'completed',
       period: 'June 2024 - September 2024',
       shortDescription: {
-        en: 'My very first portfolio built with vanilla HTML/CSS/JS.',
-        es: 'Mi primer portafolio construido con HTML/CSS/JS "vanilla".'
+        en: 'Legacy personal portfolio marking my beginnings in web development using fundamental HTML, CSS, and JavaScript technologies.',
+        es: 'Portafolio personal legado que marca mis inicios en el desarrollo web utilizando tecnologías fundamentales como HTML, CSS y JavaScript.'
       },
       fullDescription: {
         en: 'This is where everything started. A simple but effective way to showcase my first steps in the development world.',
