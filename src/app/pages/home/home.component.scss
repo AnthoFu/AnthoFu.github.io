@@ -37,12 +37,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(22, 19, 42, 0.6), var(--azul-2)), url('/images/banner-cel.png');
+    background-image: linear-gradient(to bottom, rgba(22, 19, 42, 0.6), var(--azul-2)), url('/images/banners/banner-cel.png');
     background-size: cover;
     background-position: center;
 
     @media (min-width: 768px) {
-      background-image: linear-gradient(to bottom, rgba(22, 19, 42, 0.4), var(--azul-2)), url('/images/banner-pc.png');
+      background-image: linear-gradient(to bottom, rgba(22, 19, 42, 0.4), var(--azul-2)), url('/images/banners/banner-pc.png');
     }
   }
 

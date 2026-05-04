@@ -26,7 +26,11 @@ export class ProjectService {
         es: 'En esta versión, estoy implementando características avanzadas como agrupación de proyectos por año, sistemas de diseño unificados y animaciones avanzadas utilizando las últimas funciones de Angular.'
       },
       technologies: ['Angular', 'SCSS', 'TypeScript'],
-      images: ['images/banner-pc.png', 'images/banner-cel.png', 'images/Anthofu_Icon.png'],
+      images: [
+        'images/portfolio_v2/portfolio_v2_home_pc.png',
+        'images/portfolio_v2/portfolio_v2_experience_pc.png',
+        'images/portfolio_v2/portfolio_v2_projects_mobile.png'
+      ],
       selectedImageIndex: 0,
       liveDemo: 'https://anthofu-portfolio.firebaseapp.com',
       repository: 'https://github.com/AnthoFu'
@@ -47,7 +51,7 @@ export class ProjectService {
         es: 'Anthocito es un bot de Discord integral desarrollado para gestionar servidores, proporcionar herramientas de utilidad y ofrecer minijuegos interactivos. Lo que comenzó como un proyecto de JavaScript evolucionó hacia una aplicación TypeScript robusta y segura.\n\nAspectos Técnicos Destacados:\nDiseñé una arquitectura altamente modular utilizando controladores dinámicos para comandos de barra y eventos de la API de Discord. Esto asegura que el código se mantenga limpio y fácilmente extensible a medida que se agregan nuevas funciones. La persistencia de datos se gestiona a través de esquemas de MongoDB y Mongoose, proporcionando un almacenamiento confiable para las configuraciones del servidor y las estadísticas de los usuarios.\n\nResultados:\nEl proyecto actualmente sirve como una base sólida y lista para producción con comandos de moderación y utilidad totalmente funcionales. Está optimizado para el despliegue continuo en plataformas en la nube como Render, demostrando un ciclo de vida de desarrollo backend completo, desde las pruebas locales hasta la producción en vivo.'
       },
       technologies: ['TypeScript', 'Node.js', 'Discord.js', 'MongoDB', 'Mongoose'],
-      images: ['images/anthocito-banner.png', 'images/AnthoFu-Icon_2.png'],
+      images: ['images/anthocito-banner.png', 'images/anthofu/Anthofu_Icon_2.png'],
       selectedImageIndex: 0,
       repository: 'https://github.com/anthofu/anthocito'
     },
@@ -90,7 +94,11 @@ export class ProjectService {
         es: 'FinanciaMe nació de la necesidad de una herramienta de finanzas personales robusta y "offline-first", adaptada para usuarios en entornos multi-moneda, como Venezuela. Los jóvenes profesionales a menudo tienen dificultades para consolidar los saldos en diferentes monedas (USD, VES, USDT). Esta aplicación proporciona una vista unificada de su salud financiera al obtener tipos de cambio en tiempo real mientras mantiene todos los datos sensibles de forma segura en el dispositivo.\n\nDesafíos Técnicos:\nEl principal desafío fue implementar una arquitectura "offline-first" confiable. Utilicé Zustand con lógica de persistencia personalizada y estrategias de migración para asegurar la integridad de los datos a través de las actualizaciones de la aplicación. La gestión de la lógica financiera compleja, como las transferencias multi-moneda con comisiones y los gastos recurrentes automatizados, requirió un patrón de gestión de estado estricto para evitar inconsistencias en el saldo. Además, la creación de una experiencia de usuario fluida e interactiva con Expo Reanimated y componentes de interfaz de usuario personalizados fue esencial para el compromiso del usuario.\n\nResultados:\nEl producto final es una aplicación móvil de alto rendimiento y segura, construida con TypeScript y Expo. Las tecnologías clave incluyen Zustand para una gestión de estado ligera y React Native Chart Kit para la visualización de datos. La aplicación cuenta con un sistema de presupuesto integral, seguimiento de ahorros y un sistema de notificaciones automatizadas para gastos fijos, lo que la convierte en una solución completa para la gestión financiera moderna.'
       },
       technologies: ['React Native', 'TypeScript', 'Zustand', 'Expo', 'Reanimated'],
-      images: ['images/screenshot-home.jpg', 'images/screenshot-billeteras.jpg', 'images/screenshot-metas.jpg'],
+      images: [
+        'images/financiame/screenshot-home.jpg', 
+        'images/financiame/screenshot-billeteras.jpg', 
+        'images/financiame/screenshot-metas.jpg'
+      ],
       selectedImageIndex: 0,
       repository:'https://github.com/AnthoFu/FinanciaMe',
       liveDemo:'https://play.google.com/store/apps/details?id=com.anthofu.FinanciaMe'
@@ -152,7 +160,11 @@ export class ProjectService {
         es: 'Aquí es donde empezó todo. Una forma sencilla pero eficaz de mostrar mis primeros pasos en el mundo del desarrollo.'
       },
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      images: ['images/banner-pc.png', 'images/banner-cel.png', 'images/Anthofu_Icon.png'],
+      images: [
+        'images/banner-pc.png', 
+        'images/banner-cel.png', 
+        'images/Anthofu_Icon.png'
+      ],
       selectedImageIndex: 0,
       repository:'https://github.com/AnthoFu/Portfolio/tree/main/archive/legacy'
     }

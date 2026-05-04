@@ -58,7 +58,7 @@ export class AboutComponent implements OnInit {
       titleKey: 'TECH_STACK.BACKEND',
       items: [
         { name: 'Node.js', icon: 'devicon-nodejs-plain', color: '#339933', textColor: '#FFF' },
-        { name: 'Odoo', icon: 'images/odoo_logo.svg', color: '#D1C4CD', textColor: '#714B67' },
+        { name: 'Odoo', icon: 'images/logos/odoo_logo.svg', color: '#D1C4CD', textColor: '#714B67' },
         { name: 'NestJS', icon: 'devicon-nestjs-plain', color: '#E0234E', textColor: '#FFF' }
       ]
     },
