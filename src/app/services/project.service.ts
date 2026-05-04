@@ -175,9 +175,9 @@ export class ProjectService {
       },
       technologies: ['HTML', 'CSS', 'JavaScript'],
       images: [
-        'images/banner-pc.png', 
-        'images/banner-cel.png', 
-        'images/Anthofu_Icon.png'
+        'images/portfolio_v1/portfolio_v1_home.png', 
+        'images/portfolio_v1/portfolio_v1_cards.png', 
+        'images/portfolio_v1/portfolio_v1_footer.png'
       ],
       selectedImageIndex: 0,
       repository:'https://github.com/AnthoFu/Portfolio/tree/main/archive/legacy'
